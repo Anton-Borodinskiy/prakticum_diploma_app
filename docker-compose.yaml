@@ -1,0 +1,25 @@
+version: "3"
+services:
+  frontend:
+    image: gitlab.praktikum-services.ru:5050/anton-borodinskiy/borodinskiy-momo-store-app/momo-frontend:latest
+    build:
+      context: ./frontend
+    volumes:
+      - ./frontend/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
+    networks:
+      - momo-network
+
+  backend:
+    container_name: backend
+    image: gitlab.praktikum-services.ru:5050/anton-borodinskiy/borodinskiy-momo-store-app/momo-backend:latest
+    build:
+      context: ./backend
+    ports:
+      - 8081:8081
+    networks:
+      - momo-network
+
+networks:
+  momo-network:
