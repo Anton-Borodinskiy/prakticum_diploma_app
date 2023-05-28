@@ -16,5 +16,5 @@ Continuous Deployment реализован через ArgoCD, который п�
 # Инфраструктура
 https://gitlab.praktikum-services.ru/anton-borodinskiy/borodinskiy-momo-store-infra
 
-#Helm
+# Helm
 https://gitlab.praktikum-services.ru/anton-borodinskiy/borodinskiy-momo-store-helm
